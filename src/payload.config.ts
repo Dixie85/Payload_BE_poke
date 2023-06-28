@@ -1,7 +1,8 @@
 import { buildConfig } from 'payload/config';
 import path from 'path';
-// import Examples from './collections/Examples';
 import Users from './collections/Users';
+import { Pokemon } from './collections/Pokemons';
+import { PokeUsers } from './collections/PokeUsers';
 
 export default buildConfig({
   serverURL: process.env.SERVER_URL,
@@ -10,8 +11,8 @@ export default buildConfig({
   },
   collections: [
     Users,
-    // Add Collections here
-    // Examples,
+    Pokemon,
+    PokeUsers,
   ],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),
